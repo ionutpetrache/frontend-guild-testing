@@ -1,0 +1,51 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<form action="user" method="post">
+    <fieldset>
+        <legend>Employee registration form</legend>
+        <div>
+            <label for="fname">First name:</label>
+            <input type="text" name="fname" id="fname">
+        </div>
+
+        <div>
+            <label for="lname" Last name:></label>
+            <input type="text" name="lname" id="lname">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="dob">Date of birth:</label>
+            <input type="date" name="dob" id="dob">
+        </div>
+
+        <div>
+            <input type="radio" name="sex" id="sex_m" value="male">
+            <label for="sex_m">Male</label>
+            <input type="radio" name="sex" id="sex_f" value="female">
+            <label for="sex_f">Female</label>
+        </div>
+
+        <div>
+            <label for="position">Job type:</label>
+            <select name="position" id="position">
+                <option value="se">Programmer</option>
+                <option value "st">Software Tester</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Save employee data">
+        </div>
+    </fieldset>
+</form>
