@@ -1,51 +1,51 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
 
-<form action="user" method="post">
+<form id="js-form-registration" action="user" method="post">
     <fieldset>
         <legend>Employee registration form</legend>
         <div>
             <label for="fname">First name:</label>
-            <input type="text" name="fname" id="fname">
+            <input type="text" name="fname" id="js-fname">
         </div>
 
         <div>
             <label for="lname" Last name:></label>
-            <input type="text" name="lname" id="lname">
+            <input type="text" name="lname" id="js-lname">
         </div>
 
         <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="js-email">
         </div>
 
         <div>
             <label for="dob">Date of birth:</label>
-            <input type="date" name="dob" id="dob">
+            <input type="date" name="dob" id="js-dob">
         </div>
 
         <div>
-            <input type="radio" name="sex" id="sex_m" value="male">
+            <input type="radio" name="sex" id="js-sex-m" value="male">
             <label for="sex_m">Male</label>
-            <input type="radio" name="sex" id="sex_f" value="female">
+            <input type="radio" name="sex" id="js-sex-f" value="female">
             <label for="sex_f">Female</label>
         </div>
 
         <div>
             <label for="position">Job type:</label>
-            <select name="position" id="position">
+            <select name="position" id="js-position">
                 <option value="se">Programmer</option>
-                <option value "st">Software Tester</option>
+                <option value="st">Software Tester</option>
             </select>
         </div>
 
         <div>
             <label for="comments">Comments</label>
-            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <textarea name="comments" id="js-comments" cols="30" rows="10"></textarea>
         </div>
 
         <div>
-            <input type="submit" value="Save employee data">
+            <input type="submit" value="Save employee data" id="js-submit-form">
         </div>
     </fieldset>
 </form>
