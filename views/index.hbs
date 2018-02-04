@@ -1,77 +1,117 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
 
-<form id="js-form-registration" action="user" method="post">
-    <fieldset>
-        <legend>Employee registration form</legend>
-        <section>
-            <label for="fname">First name:</label>
-            <input type="text" name="fname" id="js-fname">
-        </section>
+<section class="section">
+    <div class="container">
+         <h1 class="title is-1 has-text-centered">{{title}}</h1>
+    </div>
+</section>
 
-        <section>
-            <label for="lname" Last name:></label>
-            <input type="text" name="lname" id="js-lname">
-        </section>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6 is-offset-3">
+                <form id="js-form-registration" class="box" action="user" method="post">
+                    <div class="field">
+                        <label class="label" for="fname">First name:</label>
+                        <div class="control">
+                            <input class="input" type="text" name="fname" id="js-fname" placeholder="First name">
+                        </div>
+                    </div>
 
-        <section>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="js-email">
-        </section>
+                    <div class="field">
+                        <label class="label" for="lname"> Last name</label>
+                        <div class="control">
+                            <input class="input" type="text" name="lname" id="js-lname">
+                        </div>
+                    </div>
 
-        <section>
-            <label for="dob">Date of birth:</label>
-            <input type="date" name="dob" id="js-dob">
-        </section>
+                    <div class="field">
+                        <label class="label" for="email">Email:</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="email" name="email" id="js-email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
 
-        <section>
-            <input type="radio" name="js-sex" id="js-sex-m" value="male">
-            <label for="sex_m">Male</label>
-            <input type="radio" name="js-sex" id="js-sex-f" value="female">
-            <label for="sex_f">Female</label>
-        </section>
+                    <div class="field">
+                        <label class="label" for="dob">Date of birth:</label>
+                        <div class="control">
+                            <input class="input" type="date" name="dob" id="js-dob">
+                        </div>
+                    </div>
 
-        <section>
-            <label for="position">Job type:</label>
-            <select name="position" id="js-position">
-                <option value="se">Software Developer</option>
-                <option value="st">Software Tester</option>
-            </select>
-        </section>
+                    <div class="field">
+                        <label class="label">Sex:</label>
+                        <div class="control">
+                            <label class="radio" for="sex_m">
+                                <input type="radio" name="js-sex" id="js-sex-m" value="male"> Male
+                            </label>
 
-        <section id="js-favorite-os">
-            <div>Favorite OS</div>
-            
-            <input id="linux" name="js-os" type="radio" value="linux">
-            <label for="linux">Linux</label>
-            
-            <input id="osx" name="js-os" type="radio" value="osx">
-            <label for="osx">OS X</label>
-            
-            <input id="win" name="js-os" type="radio" value="win">
-            <label for="win">Windows</label>
-        </section>
+                            <label class="radio" for="sex_f">
+                                <input type="radio" name="js-sex" id="js-sex-f" value="female"> Female
+                            </label>
+                        </div>
+                    </div>
 
-        <section id="js-frameworks">
-            <div>Framework used</div>
+                    <div class="field">
+                        <label class="label" for="position">Job type:</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="position" id="js-position">
+                                    <option value="se">Software Developer</option>
+                                    <option value="st">Software Tester</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
 
-            <label for="angular">Angular</label>
-            <input id="angular" type="checkbox" value="angular">
+                    <div id="js-favorite-os" class="field">
+                        <label class="label">Favorite OS</label>
+                        <div class="control">
+                            <label class="radio" for="linux">
+                                <input id="linux" name="js-os" type="radio" value="linux"> Linux
+                            </label>
 
-            <label for="react">React</label>
-            <input id="react" type="checkbox" value="react">
+                            <label class="radio" for="osx">
+                                <input id="osx" name="js-os" type="radio" value="osx"> OS X
+                            </label>
 
-            <label for="vue">Vue</label>
-            <input id="vue" type="checkbox" value="vue">
-        </section>
+                            <label class="radio" for="win">
+                                <input id="win" name="js-os" type="radio" value="win"> Windows
+                            </label>
+                        </div>
+                    </div>
 
-        <section>
-            <label for="comments">Comments</label>
-            <textarea name="comments" id="js-comments" cols="30" rows="10"></textarea>
-        </section>
+                    <div id="js-frameworks" class="field">
+                        <div class="label">Framework used</div>
+                        <div class="control">
+                            <label class="checkbox" for="angular">
+                                <input id="angular" type="checkbox" value="angular"> Angular
+                            </label>
 
-        <section>
-            <input type="submit" value="Save employee data" id="js-submit-form">
-        </section>
-    </fieldset>
-</form>
+                            <label class="checkbox" for="react">
+                                <input id="react" type="checkbox" value="react"> React
+                            </label>
+
+                            <label class="checkbox" for="vue">
+                                <input class="" id="vue" type="checkbox" value="vue"> Vue
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="comments">Comments</label>
+                        <textarea class="textarea" name="comments" id="js-comments" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div>
+                        <div class="control is-group-center">
+                            <input class="button is-primary" type="submit" value="Save employee data" id="js-submit-form">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
