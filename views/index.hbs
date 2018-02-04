@@ -4,48 +4,74 @@
 <form id="js-form-registration" action="user" method="post">
     <fieldset>
         <legend>Employee registration form</legend>
-        <div>
+        <section>
             <label for="fname">First name:</label>
             <input type="text" name="fname" id="js-fname">
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="lname" Last name:></label>
             <input type="text" name="lname" id="js-lname">
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="email">Email:</label>
             <input type="email" name="email" id="js-email">
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="dob">Date of birth:</label>
             <input type="date" name="dob" id="js-dob">
-        </div>
+        </section>
 
-        <div>
-            <input type="radio" name="sex" id="js-sex-m" value="male">
+        <section>
+            <input type="radio" name="js-sex" id="js-sex-m" value="male">
             <label for="sex_m">Male</label>
-            <input type="radio" name="sex" id="js-sex-f" value="female">
+            <input type="radio" name="js-sex" id="js-sex-f" value="female">
             <label for="sex_f">Female</label>
-        </div>
+        </section>
 
-        <div>
+        <section>
             <label for="position">Job type:</label>
             <select name="position" id="js-position">
-                <option value="se">Programmer</option>
+                <option value="se">Software Developer</option>
                 <option value="st">Software Tester</option>
             </select>
-        </div>
+        </section>
 
-        <div>
+        <section id="js-favorite-os">
+            <div>Favorite OS</div>
+            
+            <input id="linux" name="js-os" type="radio" value="linux">
+            <label for="linux">Linux</label>
+            
+            <input id="osx" name="js-os" type="radio" value="osx">
+            <label for="osx">OS X</label>
+            
+            <input id="win" name="js-os" type="radio" value="win">
+            <label for="win">Windows</label>
+        </section>
+
+        <section id="js-frameworks">
+            <div>Framework used</div>
+
+            <label for="angular">Angular</label>
+            <input id="angular" type="checkbox" value="angular">
+
+            <label for="react">React</label>
+            <input id="react" type="checkbox" value="react">
+
+            <label for="vue">Vue</label>
+            <input id="vue" type="checkbox" value="vue">
+        </section>
+
+        <section>
             <label for="comments">Comments</label>
             <textarea name="comments" id="js-comments" cols="30" rows="10"></textarea>
-        </div>
+        </section>
 
-        <div>
+        <section>
             <input type="submit" value="Save employee data" id="js-submit-form">
-        </div>
+        </section>
     </fieldset>
 </form>

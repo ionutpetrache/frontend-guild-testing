@@ -18,6 +18,8 @@ module.exports = {
                 checkSexMale: { selector: '#js-sex-m' },
                 checkSexFemale: { selector: '#js-sex-f' },
                 selectJobType: { selector: '#js-position' },
+                radioLinux: { selector: '#linux' },
+                checkboxVue: { selector: '#vue' },
                 textComments: { selector: '#js-comments' },
                 buttonSaveData: { selector: '#js-submit-form' }
             }

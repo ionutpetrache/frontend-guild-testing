@@ -24,8 +24,12 @@ module.exports = {
             .waitForElementVisible('@inputDob', TIMEOUT)
             .setValue('@inputDob', '14.03.1984')
             .waitForElementVisible('@checkSexMale', TIMEOUT)
-            .click('@checkSexFemale')
+            .click('@checkSexMale')
             .waitForElementVisible('@textComments', TIMEOUT)
+            .waitForElementVisible('@radioLinux', TIMEOUT)
+            .click('@radioLinux')
+            .waitForElementVisible('@checkboxVue', TIMEOUT)
+            .click('@checkboxVue')
             .setValue('@textComments', 'This guy likes the Frontend chapter fellows')
             .waitForElementVisible('@buttonSaveData', TIMEOUT);
 
