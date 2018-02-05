@@ -1,0 +1,15 @@
+{
+    "name": "e2e-nightwatch",
+    "version": "1.0.0",
+    "author": "Ion Petrache",
+    "license": "MIT",
+    "scripts": {
+        "test": "./node_modules/.bin/nightwatch -c ./Nightwatch.js --env chrome"
+    },
+    "dependencies": {
+        "chromedriver": "2.35.0",
+        "selenium-server": "3.8.1",
+        "nightwatch-pages": "*",
+        "nightwatch": "0.9.19"
+    }
+}
