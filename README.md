@@ -1,8 +1,8 @@
 # Examples of setting up testing on Javascript project
 
 ## Unit testing (Jasmine + Karma)
-* For setting up Jasmine I've used following [yo jasmine generator](https://github.com/yeoman/generator-jasmine#readme)
-* For setting up Karma I've used following [yo karma generator](https://github.com/yeoman/generator-karma#readme)
+* For setting up [Jasmine](https://jasmine.github.io/) I've used following [yo jasmine generator](https://github.com/yeoman/generator-jasmine#readme)
+* For setting up [Karma](https://karma-runner.github.io/2.0/index.html) I've used following [yo karma generator](https://github.com/yeoman/generator-karma#readme)
 
 ## Jasmine unit tests
 * Configuration file for the HTML runner can be found [here](test/index.html)
