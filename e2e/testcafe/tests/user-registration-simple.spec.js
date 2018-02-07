@@ -6,7 +6,7 @@ fixture `Setting up before testing`
 test('Register user', async t => {
 
     await t.expect(Selector('body').find('h1').innerText)
-        .eql('Express');
+        .eql('End to end Testing');
 
     await t
         .typeText('#js-fname', 'John')

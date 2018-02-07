@@ -14,7 +14,7 @@ test('Submit user registration form', async t => {
         .click(firstPage.sex.withAttribute('value', 'female'))
         .click(firstPage.selectJobType)
         .click(firstPage.selectJobType.find('option').withText('Software Tester'))
-        .click(firstPage.os.withText('OS X'))
+        .click(firstPage.osx)
         .click(firstPage.frameworks.withText('React'))
         .typeText(firstPage.comments, "That's all folks!!!")
         .expect(firstPage.comments.value).eql("That's all folks!!!");

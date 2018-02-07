@@ -10,7 +10,7 @@ module.exports = {
         newUserPage
             .navigate()
             .waitForElementVisible('body', TIMEOUT)
-            .assert.title('Express');
+            .assert.title('End to end Testing');
 
         formSection.expect.element('@inputFirstName').to.be.visible;
 

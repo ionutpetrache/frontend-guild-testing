@@ -1,4 +1,4 @@
-const TIMEOUT = 10000;
+const TIMEOUT = 30000;
 
 module.exports = {
     tags: ['new-user-registration'],
@@ -6,7 +6,7 @@ module.exports = {
     'Register a new user': function(client) {
         client.url('http://localhost:3000')
             .waitForElementVisible('body', TIMEOUT)
-            .assert.title('Express')
+            .assert.title('End to end Testing')
             .waitForElementVisible('#js-fname', TIMEOUT)
             .setValue('#js-fname', 'Gigi')
             .waitForElementVisible('#js-lname', TIMEOUT)
@@ -27,7 +27,19 @@ module.exports = {
             .click('#vue')
             .waitForElementVisible('#js-comments', TIMEOUT)
             .setValue('#js-comments', 'This guy likes the Frontend chapter fellows')
-            .waitForElementVisible('#js-submit-form', TIMEOUT);
+            .waitForElementVisible('#js-submit-form', TIMEOUT)
+            .click('#js-submit-form')
+            .waitForElementNotPresent('#js-submit-form', TIMEOUT)
+            .waitForElementVisible('.card-header-title', TIMEOUT)
+            .assert.urlContains('/user')
+            .waitForElementVisible('.js-one', TIMEOUT)
+            .assert.containsText('.js-one>h1', 'Gigi')
+            .waitForElementVisible('.js-two', TIMEOUT)
+            .assert.containsText('.js-two>h2', 'Testarescu')
+            .waitForElementVisible('.js-three', TIMEOUT)
+            .assert.containsText('.js-three>h3', 'gigi.testarescu@example.com')
+            .waitForElementPresent('.js-four', TIMEOUT);
+
 
         client.end();
     }
