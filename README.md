@@ -10,7 +10,7 @@
 ## Coverage report with Karma and Istanbul
 1. Run the unit test example with coverage:
 ```npm test```
-2. The report will be generated in test/coverage folder
+2. The [Istanbul](https://istanbul.js.org/) code coverage report will be generated in test/coverage folder
 
 ## End to end testing (NightwatchJS or TestCafe)
 
