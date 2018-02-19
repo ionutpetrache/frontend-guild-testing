@@ -4,7 +4,9 @@
     "description": "e2e testing demo with CodeceptJS",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "install:drivers": "./node_modules/.bin/selenium-standalone install",
+        "start:selenium": "./node_modules/.bin/selenium-standalone start &",
+        "test": "./node_modules/.bin/codeceptjs run --steps"
     },
     "keywords": [
         "e2e"
