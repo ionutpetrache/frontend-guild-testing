@@ -13,13 +13,20 @@
                 "script": 60000,
                 "page load": 10000
             }
+        },
+        "Mochawesome": {
+            "uniqueScreenshotNames": "true"
         }
     },
     "include": {
         "I": "./steps_file.js",
         "userRegistrationPage": "./pages/userRegistrationPage.js"
     },
-    "mocha": {},
+    "mocha": {
+        "reporterOptions": {
+            "reportDir": "output"
+        }
+    },
     "bootstrap": false,
     "teardown": null,
     "hooks": [],
