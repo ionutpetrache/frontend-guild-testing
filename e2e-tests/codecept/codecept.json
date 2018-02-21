@@ -1,0 +1,36 @@
+{
+    "output": "./output",
+    "helpers": {
+        "WebDriverIO": {
+            "url": "http://localhost:3000",
+            "browser": "chrome",
+            "desiredCapabilities": {
+                "chromeOptions": {
+                    "args": ["--headless", "--disable-gpu", "--window-size=800,600"]
+                }
+            },
+            "timeouts": {
+                "script": 60000,
+                "page load": 10000
+            }
+        },
+        "Mochawesome": {
+            "uniqueScreenshotNames": "true"
+        }
+    },
+    "include": {
+        "I": "./steps_file.js",
+        "userRegistrationPage": "./pages/userRegistrationPage.js"
+    },
+    "mocha": {
+        "reporterOptions": {
+            "reportDir": "output"
+        }
+    },
+    "bootstrap": false,
+    "teardown": null,
+    "hooks": [],
+    "tests": "./tests/*.spec.js",
+    "timeout": 10000,
+    "name": "codecept"
+}
