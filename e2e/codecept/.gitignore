@@ -1,8 +1,0 @@
-.DS_Store
-*.log
-coverage
-doc
-node_modules
-results
-logs
-output
