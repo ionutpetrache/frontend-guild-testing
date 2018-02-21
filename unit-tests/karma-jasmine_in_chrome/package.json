@@ -3,10 +3,9 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "test": "karma start test/karma.conf.js"
+        "test": "karma start karma.conf.js"
     },
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
         "jasmine": "^2.8.0",
         "jasmine-core": "^2.9.1",

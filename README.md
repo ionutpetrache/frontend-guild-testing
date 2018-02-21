@@ -14,18 +14,28 @@
 
 ## End to end testing (NightwatchJS or TestCafe)
 
-* Example implementation of testcase with [NightwatchJS](http://nightwatchjs.org/) can be found in the following folder [e2e/nightwatch](e2e-tests/nightwatch)
+* Example implementation of testcase with [NightwatchJS](http://nightwatchjs.org/) can be found in the following folder [e2e-tests/nightwatch](e2e-tests/nightwatch)
 
-* Example implementation of testcase with [TestCafe](https://testcafe.devexpress.com/) can be found in the following folder [e2e/testcafe](e2e-tests/testcafe)
+* Example implementation of testcase with [TestCafe](https://testcafe.devexpress.com/) can be found in the following folder [e2e-tests/testcafe](e2e-tests/testcafe)
+
+* Example implementation of testcase with [Puppeteer](https://github.com/GoogleChrome/puppeteer) can be found in the following folder [e2e-tests/puppeteer](e2e-tests/puppeteer)
+
+* Example implementation of testcase with [CodeceptJS](https://codecept.io/) can be found in the following folder [e2e-tests/codecept](e2e-tests/puppeteer)
 
 
 ## How to run the e2e examples
 1. Start the server to have a basic page to run the tests against it:  
-```npm start```
-2. Start the NightwatchJS end to end tests:  
-```cd e2e-tests/nightwatch;npm test```
-3. Start the TestCafe end to end tests:  
-```cd e2e-tests/testcafe;npm test```
+```npm install;npm start```
+2. Start the NightwatchJS end to end tests:
+```cd e2e-tests/nightwatch;npm install;npm test```
+3. Start the TestCafe end to end tests:
+```cd e2e-tests/testcafe;npm install;npm test```
+4. Start TestCafe end to end on a mobile device:
+```cd e2e-tests/testcafe;npm install;npm run test-mobile```
+5. Start end to end tests with Puppeteer:
+```cd e2e-tests/puppeteer;npm install;npm test```
+6. Start CodeceptJS end to end tests:
+```cd e2e-tests/codecept;npm install;npm run install:drivers;npm run start:selenium;npm test```
 
 ### TestCafe further info
 * In order to invoke the tests on a specific browsers or on remote browsers have a look on the [package.json](e2e-tests/testcafe/package.json)
