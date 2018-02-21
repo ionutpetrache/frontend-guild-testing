@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+.editorconfig
 
 # Runtime data
 pids
@@ -25,6 +26,7 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
+.idea/
 
 # Debug log from npm
 npm-debug.log

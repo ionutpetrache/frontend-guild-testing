@@ -1,0 +1,18 @@
+{
+    "name": "karma-jasmine-test-samples",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "test": "karma start test/karma.conf.js"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "jasmine": "^2.8.0",
+        "jasmine-core": "^2.9.1",
+        "karma": "^2.0.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-coverage": "^1.1.1",
+        "karma-jasmine": "^1.1.1"
+    }
+}

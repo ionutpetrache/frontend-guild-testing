@@ -19,7 +19,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            '../public/javascripts/complex.js',
+            'code/complex.js',
             'spec/complex.spec.js'
         ],
 
@@ -33,7 +33,7 @@ module.exports = function(config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            '../public/javascripts/*.js': ['coverage']
+            'code/*.js': ['coverage']
         },
 
         // optionally, configure the reporter

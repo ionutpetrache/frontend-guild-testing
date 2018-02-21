@@ -3,8 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node ./bin/www",
-        "test": "karma start test/karma.conf.js"
+        "start": "node ./bin/www"
     },
     "dependencies": {
         "body-parser": "~1.18.2",
@@ -16,11 +15,5 @@
         "serve-favicon": "~2.4.5"
     },
     "devDependencies": {
-        "jasmine": "^2.8.0",
-        "jasmine-core": "^2.9.1",
-        "karma": "^2.0.0",
-        "karma-chrome-launcher": "^2.2.0",
-        "karma-coverage": "^1.1.1",
-        "karma-jasmine": "^1.1.1"
     }
 }
