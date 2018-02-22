@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 const devices = require('puppeteer/DeviceDescriptors');
+const { name } = require('faker');
+const generateVisualDiff = require('../utils/diff-images');
 const iPhone = devices['iPhone X'];
 const { expect } = require('chai');
 
@@ -22,7 +24,8 @@ const { expect } = require('chai');
     await page.goto('http://localhost:3000');
     let title = await page.title();
     expect(title).to.equal('End to end Testing');
-    await page.type('#js-fname', 'Ionut');
+    const fname = name.firstName();
+    await page.type('#js-fname', fname);
     await page.type('#js-lname', 'Petrache');
     await page.type('#js-email', 'ionut.petrache@example.com')
     await page.type('#js-dob', '01.06.1984');
@@ -43,7 +46,7 @@ const { expect } = require('chai');
 
     await page.waitForSelector('.js-one', { visible: true });
     const firstName = await page.evaluate(() => document.querySelector('.js-one>h1').textContent);
-    expect(firstName).to.have.string('Ionut');
+    expect(firstName).to.have.string(fname);
 
     await page.waitForSelector('.js-two', { visible: true });
     const lastName = await page.evaluate(() => document.querySelector('.js-two>h2').textContent);
@@ -54,6 +57,7 @@ const { expect } = require('chai');
     expect(expEmail).to.have.string('ionut.petrache@example.com');
 
     await page.screenshot({ path: './output/user-details.png', fullPage: true });
+    generateVisualDiff('user-details');
 
     await browser.close();
 })();

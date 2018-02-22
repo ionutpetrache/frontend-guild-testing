@@ -1,4 +1,4 @@
-# Examples of setting up testing on Javascript project
+# Examples of setting up testing on a Javascript project
 
 ## Unit testing (Jasmine + Karma)
 * For setting up [Jasmine](https://jasmine.github.io/) I've used following [yo jasmine generator](https://github.com/yeoman/generator-jasmine#readme)
@@ -9,7 +9,7 @@
 
 ## Coverage report with Karma and Istanbul
 1. Run the unit test example with coverage:
-```npm test```
+```npm install;npm test```
 2. The [Istanbul](https://istanbul.js.org/) code coverage report will be generated in unit-tests/karma-jasmine_in_chrome/coverage folder
 
 ## End to end testing (NightwatchJS or TestCafe)
@@ -39,3 +39,9 @@
 
 ### TestCafe further info
 * In order to invoke the tests on a specific browsers or on remote browsers have a look on the [package.json](e2e-tests/testcafe/package.json)
+
+### Visual validation
+* With visual validation you can create a baseline of images of your application or specific components / elements store them and during testing you generate another set. At the end you will compare the newly generated set with the baseline and you will have an image with the differences. This kind of testing can be use in order to spot the CSS issues as the other types of testing are focused more on functionality.
+
+In the example that I've implemented together with the Puppeteer example I am using [Resemble](https://github.com/Huddle/Resemble.js) to do the visual difference between the generated images.
+The diff image can be found after running the test in the [e2e-tests/puppeteer/output](e2e-tests/puppeteer/output) folder.
