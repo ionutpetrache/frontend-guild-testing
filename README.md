@@ -43,5 +43,5 @@
 ### Visual validation
 * With visual validation you can create a baseline of images of your application or specific components / elements store them and during testing you generate another set. At the end you will compare the newly generated set with the baseline and you will have an image with the differences. This kind of testing can be use in order to spot the CSS issues as the other types of testing are focused more on functionality.
 
-In the example that I've implemented together with the Puppeteer example I am using [Resemble](https://github.com/Huddle/Resemble.js) to do the visual difference between the generated images.
+* In the example that I've implemented together with the Puppeteer example I am using [Resemble](https://github.com/Huddle/Resemble.js) to do the visual difference between the generated images.
 The diff image can be found after running the test in the [e2e-tests/puppeteer/output](e2e-tests/puppeteer/output) folder.
