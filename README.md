@@ -45,3 +45,6 @@
 
 * In the example that I've implemented together with the Puppeteer example I am using [Resemble](https://github.com/Huddle/Resemble.js) to do the visual difference between the generated images.
 The diff image can be found after running the test in the [e2e-tests/puppeteer/output](e2e-tests/puppeteer/output) folder.
+
+### Using random test data
+* In some of the test examples I've used a random test data generator called [Faker.js](https://github.com/marak/Faker.js/)
