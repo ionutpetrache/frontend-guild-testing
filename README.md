@@ -1,24 +1,29 @@
 # Examples of setting up testing on a Javascript project
 
-## Unit testing (Jasmine + Karma)
-* For setting up [Jasmine](https://jasmine.github.io/) I've used following [yo jasmine generator](https://github.com/yeoman/generator-jasmine#readme)
-* For setting up [Karma](https://karma-runner.github.io/2.0/index.html) I've used following [yo karma generator](https://github.com/yeoman/generator-karma#readme)
+## Unit testing (Jasmine, Karma, Mocha)
+* For setting up [Jasmine](https://jasmine.github.io/) I've used following [Jasmine generator for Yeoman](https://github.com/yeoman/generator-jasmine#readme)
+* For setting up [Karma](https://karma-runner.github.io/2.0/index.html) I've used following [Karma generator for Yeoman](https://github.com/yeoman/generator-karma#readme)
+* For the setup of Mocha tests, there is also a [Yeoman Mocha generator](https://www.npmjs.com/package/generator-mocha), but it has not been used here; in order to start writing Mocha tests, it is enough to clone the related directories in this repo.
 
-## Jasmine ES6 in-browser unit tests - ready setup
+### Jasmine ES6 in-browser unit tests - ready setup
 * Copy the whole directory [unit-tests/karma-jasmine_in_chrome](https://github.com/ionutpetrache/frontend-guild-testing-e2e/tree/master/unit-tests/karma-jasmine_in_chrome).
 * Get into the directory and execute `npm install`.
 * Load [index.html](https://github.com/ionutpetrache/frontend-guild-testing-e2e/blob/master/unit-tests/karma-jasmine_in_chrome/index.html) in the browser and verify that _all but one_ sample tests run successfully.
 * Import your code and start writing your own tests.
 
-## Mocha ES6 in-browser unit tests - ready setup
+### Mocha ES6 in-browser unit tests - ready setup
 * Copy the whole directory [unit-tests/requirejs_es6_in-browser](https://github.com/ionutpetrache/frontend-guild-testing-e2e/tree/master/unit-tests/requirejs_es6_in-browser).
+* Get into the directory and execute `npm install`.
+* Execute 'npm run compile_es6'; this is a sample watcher that will pause and run again every time you modify one of the relevant files.
+* You may now check inside [package.json](https://github.com/ionutpetrache/frontend-guild-testing-e2e/blob/master/unit-tests/requirejs_es6_in-browser/package.json#L7) the syntax of the watcher, the directories where it watches files, etc.
 * Load [Mocha_test_page.html](https://github.com/ionutpetrache/frontend-guild-testing-e2e/blob/master/unit-tests/requirejs_es6_in-browser/Mocha_test_page.html) in the browser and verify that the sample test runs successfully.
-* Import your code and start writing your own tests.
+* Import your code and start writing your own tests. NB: every time you create or copy a new file into the setup you need to restart the watcher!!
 
-## Mocha ES6 server-side unit tests - ready setup
+### Mocha ES6 server-side unit tests - ready setup
 * Copy the whole directory [unit_tests/es6_in-server](https://github.com/ionutpetrache/frontend-guild-testing-e2e/tree/master/unit-tests/es6_in-server).
 * Get into the directory and execute `npm install`.
 * Execute 'npm run run_es6_tests' and verify that the sample test runs successfully.
+* You may now check inside [package.json](https://github.com/ionutpetrache/frontend-guild-testing-e2e/blob/master/unit-tests/es6_in-server/package.json#L7) the syntax of the compiling command, the directories where it reads/writes files, etc.
 * Import your code and start writing your own tests.
 
 ## Coverage report with Karma and Istanbul
